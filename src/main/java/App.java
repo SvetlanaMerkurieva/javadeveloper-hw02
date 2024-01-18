@@ -1,16 +1,18 @@
 import java.util.Scanner;
 
+
 public class App {
 
     public static void main(String[] args) {
+        int numberOfBoxes = 9;
         Scanner scan = new Scanner(System.in);
         byte input;
         byte rand;
         byte i;
-        boolean boxAvailable = false;
+        boolean boxAvailable;
         byte winner = 0;
-        char box[] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-        System.out.println("Enter box number to select. Enjoy!\n");
+        char[] box = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+        System.out.println(("Enter box number to select. Enjoy!\n"));
 
         boolean boxEmpty = false;
         while (true) {
@@ -20,7 +22,7 @@ public class App {
             System.out.println("-----------");
             System.out.println(" " + box[6] + " | " + box[7] + " | " + box[8] + " \n");
             if(!boxEmpty){
-                for(i = 0; i < 9; i++)
+                for(i = 0; i < numberOfBoxes; i++)
                     box[i] = ' ';
                 boxEmpty = true;
             }
@@ -38,7 +40,7 @@ public class App {
 
             while (true) {
                 input = scan.nextByte();
-                if (input > 0 && input < 10) {
+                if (input > 0 && input < numberOfBoxes + 1) {
                     if (box[input - 1] == 'X' || box[input - 1] == 'O')
                         System.out.println("That one is already in use. Enter another.");
                     else {
@@ -58,14 +60,14 @@ public class App {
             }
 
             boxAvailable = false;
-            for(i=0; i<9; i++){
+            for(i=0; i<numberOfBoxes; i++){
                 if(box[i] != 'X' && box[i] != 'O'){
                     boxAvailable = true;
                     break;
                 }
             }
 
-            if(boxAvailable == false){
+            if(!boxAvailable){
                 winner = 3;
                 continue;
             }
@@ -82,7 +84,6 @@ public class App {
                (box[0]=='O' && box[3]=='O' && box[6]=='O') || (box[1]=='O' && box[4]=='O' && box[7]=='O') || (box[2]=='O' && box[5]=='O' && box[8]=='O') ||
                (box[0]=='O' && box[4]=='O' && box[8]=='O') || (box[2]=='O' && box[4]=='O' && box[6]=='O')){
                 winner = 2;
-                continue;
             }
         }
 
