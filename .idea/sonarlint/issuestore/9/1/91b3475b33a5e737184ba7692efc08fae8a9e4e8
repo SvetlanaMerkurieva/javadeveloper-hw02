@@ -1,0 +1,6 @@
+
+z	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆžÿÿÿÿÿ8¶¤â™Ò1
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed.(×à¤Æþÿÿÿÿ8¿±à™Ò1
+ç
+java:S6541"ÄA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 72 to 64, Complexity from 17 to 14, Nesting Level from 4 to 2, Number of Variables from 9 to 6.(×à¤Æþÿÿÿÿ8Ó±à™Ò1

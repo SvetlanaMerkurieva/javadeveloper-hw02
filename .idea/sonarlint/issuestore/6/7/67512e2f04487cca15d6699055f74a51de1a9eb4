@@ -1,19 +1,3 @@
 
-z	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8êéòÑ1
 7
-java:S1220""Move this file to a named package.8ìéòÑ1
-o
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 71 to the 15 allowed.(Çµí‘8çêòÑ1
-G	java:S106"+Replace this use of System.out by a logger.(ØôÀî8îêòÑ1
-G	java:S106"+Replace this use of System.out by a logger.(½šÆÛ8ïêòÑ1
-G	java:S106"+Replace this use of System.out by a logger.(‚ÎšÛ8ïêòÑ1
-F	java:S106"+Replace this use of System.out by a logger.(š²ıc8ïêòÑ1
-G	java:S106"+Replace this use of System.out by a logger.(‚ÎšÛ8ïêòÑ1
-G	java:S106"+Replace this use of System.out by a logger.(èå”8ïêòÑ1
-G	java:S106"+Replace this use of System.out by a logger.(¯Óêï8ğêòÑ1
-G	java:S106""+Replace this use of System.out by a logger.(‰¨ËÓ8ğêòÑ1
-L	java:S106%"+Replace this use of System.out by a logger.(äßŸµşÿÿÿÿ8ğêòÑ1
-G	java:S106-"+Replace this use of System.out by a logger.(Ú÷•Ï8ñêòÑ1
-G	java:S1064"+Replace this use of System.out by a logger.(àïôÊ8ñêòÑ1
-ã
-java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 76 to 64, Complexity from 67 to 14, Nesting Level from 4 to 2, Number of Variables from 10 to 6.(Çµí‘8òêòÑ1
+java:S1220""Move this file to a named package.8¤Ó£™Ò1
