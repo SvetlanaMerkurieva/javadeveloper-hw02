@@ -5,13 +5,12 @@ import java.util.Scanner;
 
 public class TicTacToe {
 
-    public void head () {
+    public void main () {
         Scanner scan = new Scanner(System.in);
         byte input;
         byte rand;
         byte i;
         boolean boxAvailable;
-        byte winner = 0;
         char[] box = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
         int numberOfBoxes = 9;
         System.out.println(("Enter box number to select. Enjoy!\n"));
@@ -28,15 +27,23 @@ public class TicTacToe {
                 boxEmpty = true;
             }
 
-            if (winner == 1) {
+            if (isThreeCrossesInRow(box)) {
                 System.out.println("You won the game!\nCreated by Shreyas Saha. Thanks for playing!");
                 break;
             }
-            if (winner == 2) {
+            if (isThreeZeroesInRow(box)) {
                 System.out.println("You lost the game!\nCreated by Shreyas Saha. Thanks for playing!");
                 break;
             }
-            if (winner == 3) {
+
+            boxAvailable = false;
+            for (i = 0; i < numberOfBoxes; i++) {
+                if (isBoxFree(box, i)) {
+                    boxAvailable = true;
+                    break;
+                }
+            }
+            if (!boxAvailable) {
                 System.out.println("It's a draw!\nCreated by Shreyas Saha. Thanks for playing!");
                 break;
             }
@@ -55,32 +62,12 @@ public class TicTacToe {
                 }
             }
 
-            if (isThreeCrossesInRow(box)) {
-                winner = 1;
-            }
-
-            boxAvailable = false;
-            for (i = 0; i < numberOfBoxes; i++) {
-                if (isBoxFree(box, i)) {
-                    boxAvailable = true;
-                    break;
-                }
-            }
-
-            if (!boxAvailable) {
-                winner = 3;
-            }
-
             while (true) {
                 rand = (byte) (Math.random() * (9 - 1 + 1) + 1);
                 if (isRandBoxFree(box, rand)) {
                     box[rand - 1] = 'O';
                     break;
                 }
-            }
-
-            if (isThreeZeroesInRow(box)) {
-                winner = 2;
             }
         }
     }
@@ -111,20 +98,6 @@ public class TicTacToe {
 
     public static boolean isCorrectInput (byte input, int numberOfBoxes) {
         return input > 0 && input <= numberOfBoxes;
-    }
-
-    public static String resultMessage(byte winner) {
-        String message = "";
-        if (winner == 1) {
-            return message + "You won the game!\nCreated by Shreyas Saha. Thanks for playing!";
-        }
-        if (winner == 2) {
-            return message + "You lost the game!\nCreated by Shreyas Saha. Thanks for playing!";
-        }
-        if (winner == 3) {
-            return message + "It's a draw!\nCreated by Shreyas Saha. Thanks for playing!";
-        }
-        return message;
     }
 
 }
